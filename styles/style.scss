@@ -1,0 +1,736 @@
+// Google fonts import-------------------------------
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@500&family=Poppins:wght@100;200;300;400;500&family=Smooch&display=swap');
+
+
+// root variables-------------------------------------
+
+:root {
+    --oncoblue:#39c1eb;
+    --oncogray:gray;
+    --black:#111;
+    --space-blue: #1d2951;
+    --white: #fff;
+    --powderblue: #b0dfe5;
+    --light-color: #666;
+    --light-bg: #eee;
+    --box-shadow: 0 .5rem 1rem rgba(0,0,0,.1);
+    --border: .1rem solid rgba(0,0,0,.3);
+}
+
+// Global reset of styles------------------------------
+
+* {
+    
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    outline: none;
+    border: none;
+    text-decoration: none;
+    transition: all .2s linear;
+
+    &::after,
+    &::before {
+        box-sizing: inherit;
+    }
+}
+
+// Mixins -----------------------------------------------
+
+@mixin grid($val) { 
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax($val, 1fr));
+    gap: 2rem;
+}
+
+@mixin titleText($titleSize) {
+    font-size: $titleSize;
+    color: var(--space-blue);
+    text-transform: uppercase;
+}
+
+@mixin paragraphText($paragraphTextSize) {
+    font-size: $paragraphTextSize;
+    color: var(--light-color);
+    line-height: 2;
+}
+
+@mixin iconsBox() {
+    height: 5rem;
+    width: 5rem;
+    line-height: 5rem;
+    font-size: 2rem;
+    background: var(--powderblue);
+    color: var(--space-blue);
+    text-align: center;
+    cursor: pointer;
+
+    &:hover {
+        background: var(--space-blue);
+        color: var(--powderblue);
+    }
+    
+}
+
+html {
+    font-family: 'Poppins', sans-serif;
+    font-size: 62.5%;
+    overflow-x: hidden;
+    scroll-behavior: smooth;
+    scroll-padding-top: 7rem;
+    text-transform: capitalize;
+
+    &::-webkit-scrollbar {
+        width: 1rem;
+    }
+
+    &::-webkit-scrollbar-track {
+        background: transparent;
+    }
+
+    &::-webkit-scrollbar-thumb {
+        background: var(--oncoblue);
+    }
+}
+
+section {
+    padding: 5rem 10%;
+}
+
+.heading {
+    margin-bottom: 3rem;
+    @include titleText(3rem);
+    padding-left: 1rem;
+    border-left: 1rem solid var(--oncoblue);
+}
+
+
+.btn {
+    display: inline-block;
+    margin-top: 1rem;
+    padding: 1rem 3rem;
+    background: var(--space-blue);
+    color: var(--white);
+    cursor: pointer;
+    font-size: 1.7rem;
+    text-transform: capitalize;
+
+    &:hover {
+        background: var(--oncoblue);
+        color: var(--space-blue);
+    }
+}
+
+
+
+// ===================================================================
+
+// header style--------------------------------------
+
+.header {
+    position: sticky;
+    top: 0;
+    left: 0;
+    right: 0;
+    box-shadow: var(--box-shadow);
+    padding: 1.5rem 10%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: var(--white);
+    z-index: 1000;
+
+    .logo {
+
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        
+        img {
+            height: 4rem;
+            padding-right: 1rem
+        }
+
+        span {
+            @include titleText(2.5rem);
+            font-weight: 400;
+            font-family: 'Open Sans', sans-serif;
+
+            
+
+            &.onco {
+                color: var(--oncoblue);
+                padding-left: 1rem;
+                border-left: .1rem solid gray;
+            }
+
+            &.solutions {
+                color: var(--oncogray);
+            }
+            
+        }
+
+    }
+
+    .navbar {
+        a {
+            @include titleText(1.5rem);
+            margin: 0 1rem;
+            font-weight: 500;
+
+            &.active {
+                color: var(--oncoblue);
+                padding-left: 1rem;
+                border-left: 1rem solid var(--oncoblue);
+            }
+
+            &:hover {
+                color: var(--oncoblue);
+                padding-left: 1rem;
+                border-left: 1rem solid var(--oncoblue);
+            }
+        }
+    }
+
+    .icons {
+        div {
+            @include iconsBox()
+
+        }
+    }
+
+    #menu-btn {
+        display: none;
+    }
+
+    // Contact info-------------------------------
+
+    .contact-info {
+        position: fixed;
+        top: 0;
+        right: 0;
+        width: 35rem;
+        background: var(--white);
+        height: 100%;
+        text-align: center;
+        padding: 5rem 2rem 0;
+        z-index: 1100;
+        display: none;
+
+        &.active {
+            box-shadow: 0 0 0 100vw rgba(0, 0, 0, .7);
+            display: block;
+        }
+
+        #close-contact-info {
+            position: absolute;
+            top: 1rem;
+            right: 1.5rem;
+            cursor: pointer;
+            font-size: 3rem;
+            color: var(--space-blue);
+
+            &:hover {
+                transform: rotate(120deg);
+            }
+        }
+
+        .info {
+            padding: 2rem 0;
+
+            i {
+                @include iconsBox();
+                margin-bottom: .5rem;
+            }
+
+            h3 {
+                @include titleText(2rem);
+                padding:  1rem 0;
+            }
+
+            p {
+                @include paragraphText(1.5rem);
+            }
+        }
+
+        .share {
+            padding-top: 2rem;
+            border-top: var(--border);
+            margin-top: 1rem;
+
+            a {
+                @include iconsBox();
+                margin: 0 .3rem;
+            }
+        }
+    }
+
+}
+
+// Home section starts here--------------------------
+
+.home {
+    padding: 0;
+
+    .slide {
+        min-height: 6rem;
+        display: flex;
+        align-items: center;
+        position: relative;
+        background-size: cover !important;
+        background-position: center !important;
+        
+
+        .content {
+            width: 50rem;
+            position: relative;
+
+            h3 {
+                @include titleText(5rem);
+                text-transform: uppercase;
+            }
+
+            p {
+                @include paragraphText(1.8rem);
+                padding: 1rem 0;
+            }
+        }
+    }
+}
+
+// About section--------------------------
+
+.about {
+    
+
+    .row {
+       display: flex; 
+       align-items: center;
+       flex-wrap: wrap;
+       gap: 3rem;
+
+       .video {
+           flex: 1 1 41rem;
+
+           img {
+               width: 100%;
+           }
+       }
+
+       .content {
+           flex: 1 1 41rem;
+
+           h3 {
+               @include titleText(3rem)
+           }
+
+           p {
+               @include paragraphText(1.5rem);
+               padding: 1rem 0;
+           }
+       }
+    }
+}
+
+
+// products section -------------------------------
+
+.cat-container {
+    @include grid(30rem);
+    margin-bottom: 2rem;
+    
+    .banner {
+        display: flex;
+        align-items: center;
+        padding: 1rem;
+        border: var(--border);
+        gap: 3rem;
+
+        .cat-image {
+            width: 70%;
+
+            img {
+                width: 100%;
+            }
+        }
+        
+        .content {
+            
+
+            h3 {
+                @include titleText(2rem);
+            }
+
+            p {
+                @include paragraphText(1.7rem);
+            }
+        }
+    }
+}
+
+// Services section-------------------
+
+.services-wrapper {
+    @include grid(35rem);
+
+    // >div:nth-child(1) {
+    //     background: #39c1eb;
+    // }
+    // >div:nth-child(2) {
+    //     background: #25d468;
+    // }
+    // >div:nth-child(3) {
+    //     background: #e42a96;
+    // }
+
+    .service-box {
+        display: flex;
+        flex-direction: column;
+        padding: 2rem;
+        text-align: center;
+        background-color: var(--powderblue);
+
+        &:hover {
+            color: var(--powderblue);
+            background-color: var(--space-blue);
+
+            h3 {
+                color: var(--oncoblue);
+            }
+        }
+
+        .icon {
+            font-size: xxx-large;
+            color: #eee;
+        }
+
+        h3 {
+            @include titleText(1.7rem);
+        }
+
+        p {
+            @include paragraphText(1.4rem);
+        }
+        
+    }
+}
+
+// our projects -----------------------------
+
+.projects{
+
+    .projects-wrapper {
+        @include grid(35rem);
+        gap: 2rem;
+        margin-bottom: 2rem;
+
+        .project-box {
+            
+            &:hover {
+                transform: scale(1.03);
+            }
+
+            img {
+                max-width: 100%;
+                max-height: auto;
+                display: block;
+                
+            }
+
+            .text {
+            
+                h3 {
+                    @include titleText(1.5rem);
+                    margin-top: 2rem;
+                }
+
+                .place {
+                    @include paragraphText(1.5rem);
+                }
+
+                p {
+                    @include paragraphText(1.1rem)
+                }    
+
+            }
+        }
+        
+    }
+
+    .btn {
+        display: block;
+        text-align: center;
+    }
+
+}
+
+// Footer section--------------------
+
+.footer {
+    background: var(--oncoblue);
+    .slogan {
+        text-align: center;
+        font-family: 'Smooch', cursive;
+        padding: 2rem 0;
+        font-size: 3rem;
+        color: var(--white)
+        
+    }
+
+    .footer-wrapper {
+        @include grid(20rem);
+
+        .col {
+            display: flex;
+            flex-direction: column;
+            @include paragraphText(1.5rem);
+            
+            a {
+                &:hover {
+                @include paragraphText(1.3rem);
+                color: var(--white);
+                }
+
+            }
+        }
+    }
+
+}
+
+.footer-year {
+    font-size: 1.3rem;
+    color: var(--white);
+    text-align: center;
+    padding-top: 2rem;
+    background: var(--space-blue);
+}
+
+// other pages==========================================
+// our projects page----------
+
+.page-header {
+    
+    .header-row {
+        @include grid(30rem);
+        align-items: center;
+        
+        .header-image {
+             display: flex;
+            //  flex-wrap: wrap;
+
+        }
+
+        .header-content {
+            background:var(--powderblue);
+            padding: 2rem;
+
+            h3 {
+                @include titleText(3rem);
+            }
+
+            p {
+                @include paragraphText(1.3rem);
+
+                &.tag {
+                    @include paragraphText(1.6rem);
+                }
+            }
+        }
+    }
+
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+//================= media querries for small screen sizes ==================
+
+// screen size up to 1200px----------------
+
+@media (max-width: 1200px) {
+
+    html {
+        font-size: 55%;
+    }
+
+    section {
+        padding: 3rem 10%;
+    }
+
+    .cat-container {
+        @include grid(25rem);
+        margin-bottom: 2rem;
+    
+        .banner {
+            display: flex;
+            align-items: center;
+            padding: 1rem;
+            border: var(--border);
+            gap: 3rem;
+    
+            .cat-image {
+                width: 70%;
+    
+                img {
+                    width: 100%;
+                }
+            }
+            
+            .content {
+                
+    
+                h3 {
+                    @include titleText(1.4rem);
+                }
+    
+                p {
+                    @include paragraphText(1.2rem);
+                }
+            }
+        }
+    }
+}
+
+
+// screen size up to 991px----------------
+
+@media (max-width: 991px) {
+
+    html {
+        font-size: 55%;
+    }
+    section {
+        padding: 3rem 10%;
+    }
+
+    .header {
+
+        #menu-btn {
+            display: inline-block;
+        }
+
+        .navbar {
+            position: absolute;
+            top: 99%;
+            left: 0;
+            right: 0;
+            background: var(--white);
+            border-top: var(--border);
+            border-bottom: var(--border);
+            clip-path: polygon(0 0, 100% 0, 100% 0, 0 0);
+
+            &.active {
+                clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+            }
+
+            a {
+                display: block;
+                margin: 2rem;
+                
+                &:hover {
+                    border-bottom: 1px solid var(--oncoblue);
+                }
+            }
+            
+        }
+    }
+
+    .cat-container {
+        @include grid(40rem);
+        margin-bottom: 2rem;
+    
+        .banner {
+            display: flex;
+            align-items: center;
+            padding: 1rem;
+            border: var(--border);
+            gap: 3rem;
+    
+            .cat-image {
+                width: 70%;
+    
+                img {
+                    width: 100%;
+                }
+            }
+            
+            .content {
+                
+    
+                h3 {
+                    @include titleText(2rem);
+                }
+    
+                p {
+                    @include paragraphText(1.7rem);
+                }
+            }
+        }
+    }
+}
+
+
+// screen size up to 768px----------------
+
+@media (max-width: 768px) {
+
+    html {
+        font-size: 55%;
+    }
+
+    section {
+        padding: 3rem 10%;
+    }
+}
+
+
+// screen size up to 450px----------------
+
+@media (max-width: 450px) {
+
+    html {
+        font-size: 50%;
+    }
+
+    section {
+        padding: 2rem 10%;
+    }
+}
+
+
+
