@@ -830,10 +830,111 @@ section {
 // ----------End of products styles  --------------
 
 
+// Start of services page-------------------------------------
+
+.service-type {
+
+    .service-name {
+            @include titleText(2rem);
+            padding-left: 1rem;
+            border-left: 1rem solid var(--oncoblue);
+            background-color: var(--powderblue);
+    }
+}
 
 
 
+// End of services page-------------------------------------
 
+
+.service-categories {
+    display: grid;
+    justify-content: space-between;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-areas: "category-one category-two category-three";
+
+    .category-one {
+        display: flex;
+        align-items: center;
+        grid-area: category-one;
+        
+
+        .icon {
+            background-color: var(--space-blue);
+            text-align: center; 
+            margin: 10% 2%;
+            padding: 4% 5%;
+            border-radius: 20%;
+            
+            span {
+                font-size: 4rem;
+                color: var(--oncoblue);
+            }
+
+            h4 {
+                font-size: 1.5rem;
+                color: var(--powderblue);
+            }
+        }
+    }
+    .category-two {
+        display: flex;
+        align-items: center;
+        grid-area: category-two;
+        
+
+        .icon {
+            background-color: var(--space-blue);
+            text-align: center;  
+            margin: 10% 2%;
+            padding: 4% 4%;
+            border-radius: 20%;
+            
+            span {
+                font-size: 4rem;
+                color: var(--oncoblue);
+            }
+
+            h4 {
+                font-size: 1.5rem;
+                color: var(--powderblue);
+            }
+        }
+    }
+    .category-three {
+        display: flex;
+        align-items: center;
+        grid-area: category-three;
+        
+
+        .icon {
+            background-color: var(--space-blue);
+            text-align: center;  
+            margin: 10% 2%;
+            padding: 4% 4%;
+            border-radius: 20%;
+            
+            span {
+                font-size: 4rem;
+                color: var(--oncoblue);
+            }
+
+            h4 {
+                font-size: 1.5rem;
+                color: var(--powderblue);
+            }
+        }
+    }
+
+    .service-category-text {
+        font-size: 1.3rem;
+        color: var(--space-blue);
+        // width: 80%;
+        margin: 10% 5%;
+        padding: 2%;
+        text-align: justify;
+    }
+}
 
 
 
@@ -913,6 +1014,95 @@ section {
                     }
                 }
             }
+    }
+
+    // Services-------------------------------------------
+    .service-categories {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        grid-template-areas: "category-one category-two category-three";
+    
+        .category-one {
+            display: flex;
+            align-items: center;
+            grid-area: category-one;
+            
+    
+            .icon {
+                background-color: var(--space-blue);
+                text-align: center;  
+                margin: 10% 2%;
+                padding: 4% 5%;
+                border-radius: 20%;
+                
+                span {
+                    font-size: 4rem;
+                    color: var(--oncoblue);
+                }
+    
+                h4 {
+                    font-size: 1.5rem;
+                    color: var(--powderblue);
+                }
+            }
+        }
+        .category-two {
+            display: flex;
+            align-items: center;
+            grid-area: category-two;
+            
+    
+            .icon {
+                background-color: var(--space-blue);
+                text-align: center;  
+                margin: 10% 2%;
+                padding: 4% 4%;
+                border-radius: 20%;
+                
+                span {
+                    font-size: 4rem;
+                    color: var(--oncoblue);
+                }
+    
+                h4 {
+                    font-size: 1.5rem;
+                    color: var(--powderblue);
+                }
+            }
+        }
+        .category-three {
+            display: flex;
+            align-items: center;
+            grid-area: category-three;
+            
+    
+            .icon {
+                background-color: var(--space-blue);
+                text-align: center;  
+                margin: 10% 2%;
+                padding: 4% 4%;
+                border-radius: 20%;
+                
+                span {
+                    font-size: 4rem;
+                    color: var(--oncoblue);
+                }
+    
+                h4 {
+                    font-size: 1.5rem;
+                    color: var(--powderblue);
+                }
+            }
+        }
+    
+        .service-category-text {
+            font-size: 1.3rem;
+            color: var(--space-blue);
+            // width: 80%;
+            margin: 10% 5%;
+            padding: 2%;
+            text-align: justify;
+        }
     }
 
 }
@@ -1264,6 +1454,99 @@ section {
     }
 
     // ----------End of products styles  --------------
+
+    // Services-------------------------------------
+
+    .service-categories {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        grid-template-areas: "category-one category-two category-three";
+    
+        .category-one {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            grid-area: category-one;
+            
+    
+            .icon {
+                background-color: var(--space-blue);
+                text-align: center;  
+                margin: 10% 2% 3% 2%;
+                padding: 4% 5%;
+                border-radius: 20%;
+                
+                span {
+                    font-size: 4rem;
+                    color: var(--oncoblue);
+                }
+    
+                h4 {
+                    font-size: 1.5rem;
+                    color: var(--powderblue);
+                }
+            }
+        }
+        .category-two {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            grid-area: category-two;
+            
+    
+            .icon {
+                background-color: var(--space-blue);
+                text-align: center;  
+                margin: 10% 2% 3% 2%;
+                padding: 4% 5%;
+                border-radius: 20%;
+                
+                span {
+                    font-size: 4rem;
+                    color: var(--oncoblue);
+                }
+    
+                h4 {
+                    font-size: 1.5rem;
+                    color: var(--powderblue);
+                }
+            }
+        }
+        .category-three {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            grid-area: category-three;
+            
+    
+            .icon {
+                background-color: var(--space-blue);
+                text-align: center;  
+                margin: 10% 2% 3% 2%;
+                padding: 4% 5%;
+                border-radius: 20%;
+                
+                span {
+                    font-size: 4rem;
+                    color: var(--oncoblue);
+                }
+    
+                h4 {
+                    font-size: 1.5rem;
+                    color: var(--powderblue);
+                }
+            }
+        }
+    
+        .service-category-text {
+            font-size: 1.5rem;
+            color: var(--space-blue);
+            // width: 80%;
+            margin: 10% 5%;
+            padding: 2%;
+            text-align: justify;
+        }
+    }
 }
 
 // #################################################################################################
@@ -1607,6 +1890,114 @@ section {
 // ----------End of products styles  --------------
 
 // LED light fixtures---------------------------------------------
+
+// Services-------------------------------------
+
+.service-categories {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-areas: "category-one" 
+                            "category-two" 
+                            "category-three";
+
+    .category-one {
+        display: flex;
+        align-items: center;
+        grid-area: category-one;
+        
+
+        .icon {
+            background-color: var(--space-blue);
+            text-align: center;  
+            margin: 2% 2%;
+            padding: 4% 5%;
+            border-radius: 20%;
+            
+            span {
+                font-size: 4rem;
+                color: var(--oncoblue);
+            }
+
+            h4 {
+                font-size: 1.5rem;
+                color: var(--powderblue);
+            }
+        }
+        .service-category-text {
+            font-size: 1.5rem;
+            color: var(--space-blue);
+            margin: 0% 5%;
+            padding: 2%;
+            text-align: justify;
+        }
+    }
+    .category-two {
+        display: flex;
+        align-items: center;
+        grid-area: category-two;
+        background-color: var(--light-bg);
+        
+
+        .icon {
+            background-color: var(--space-blue);
+            text-align: center;  
+            margin: 2% 2%;
+            padding: 4% 4%;
+            border-radius: 20%;
+            
+            span {
+                font-size: 4rem;
+                color: var(--oncoblue);
+            }
+
+            h4 {
+                font-size: 1.5rem;
+                color: var(--powderblue);
+            }
+        }
+
+        .service-category-text {
+            font-size: 1.5rem;
+            color: var(--space-blue);
+            margin: 0% 5%;
+            padding: 2%;
+            text-align: justify;
+        }
+    }
+    .category-three {
+        display: flex;
+        align-items: center;
+        grid-area: category-three;
+        
+
+        .icon {
+            background-color: var(--space-blue);
+            text-align: center;  
+            margin: 2% 2%;
+            padding: 4% 4%;
+            border-radius: 20%;
+            
+            span {
+                font-size: 4rem;
+                color: var(--oncoblue);
+            }
+
+            h4 {
+                font-size: 1.5rem;
+                color: var(--powderblue);
+            }
+        }
+        .service-category-text {
+            font-size: 1.5rem;
+            color: var(--space-blue);
+            margin: 0% 5%;
+            padding: 2%;
+            text-align: justify;
+        }
+    }
+
+    
+}
 
 }
 
