@@ -640,6 +640,16 @@ section {
   letter-spacing: 0.57rem;
 }
 
+.category-intro .info-text .category-tag-contacts {
+  font-size: 1.5rem;
+  color: var(--light-color);
+  line-height: 2;
+  padding-left: 1rem;
+  border-left: 1rem solid var(--oncoblue);
+  text-transform: uppercase;
+  letter-spacing: 0.45rem;
+}
+
 .category-intro .info-text .category-text {
   font-size: 1.4rem;
   color: var(--light-color);
@@ -1005,6 +1015,28 @@ section {
   margin: 10% 5%;
   padding: 2%;
   text-align: justify;
+}
+
+.info-contact {
+  margin-left: 3rem;
+  padding-left: 1rem;
+}
+
+.info-contact .category-sub-header {
+  font-size: 2rem;
+  color: var(--space-blue);
+  text-transform: uppercase;
+  color: var(--space-blue);
+  border-left: 0.5rem solid var(--oncoblue);
+  padding-left: 1rem;
+}
+
+.info-contact .contact-info {
+  font-size: 1.3rem;
+  color: var(--light-color);
+  line-height: 2;
+  padding-left: 1rem;
+  padding-left: 1.5rem;
 }
 
 @media (max-width: 1440px) {
@@ -2090,6 +2122,15 @@ section {
     border-left: 1rem solid var(--oncoblue);
     text-transform: uppercase;
     letter-spacing: 0.29rem;
+  }
+  .category-intro .info-text .category-tag-contacts {
+    font-size: 1.5rem;
+    color: var(--light-color);
+    line-height: 2;
+    padding-left: 1rem;
+    border-left: 1rem solid var(--oncoblue);
+    text-transform: uppercase;
+    letter-spacing: 0.18rem;
   }
   .category-intro .info-text .category-text {
     font-size: 1.4rem;

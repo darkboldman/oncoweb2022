@@ -596,6 +596,13 @@ section {
             text-transform: uppercase;
             letter-spacing: 0.57rem;
         }
+        .category-tag-contacts {
+            @include paragraphText(1.5rem);
+            padding-left: 1rem;
+            border-left: 1rem solid var(--oncoblue);
+            text-transform: uppercase;
+            letter-spacing: 0.45rem;
+        }
 
         .category-text {
             @include paragraphText(1.4rem);
@@ -936,7 +943,25 @@ section {
     }
 }
 
+// Contact us---------------------------------------
+.info-contact {
 
+    margin-left: 3rem;
+    padding-left: 1rem;
+    
+
+    .category-sub-header {
+        @include titleText(2rem);
+        color: var(--space-blue);
+        border-left: 0.5rem solid var(--oncoblue);
+        padding-left: 1rem;
+    }
+    .contact-info {
+        @include paragraphText(1.3rem);
+        padding-left: 1rem;
+        padding-left: 1.5rem;
+    }
+}
 
 
 
@@ -2085,6 +2110,13 @@ section {
                 border-left: 1rem solid var(--oncoblue);
                 text-transform: uppercase;
                 letter-spacing: 0.29rem;
+            }
+            .category-tag-contacts {
+                @include paragraphText(1.5rem);
+                padding-left: 1rem;
+                border-left: 1rem solid var(--oncoblue);
+                text-transform: uppercase;
+                letter-spacing: 0.18rem;
             }
 
             .category-text {
