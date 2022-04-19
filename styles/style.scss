@@ -335,53 +335,69 @@ section {
 
 // products section -------------------------------
 
-.cat-container {
-    @include grid(30rem);
-    margin-bottom: 2rem;
+.product-page-front-wrap {
+
+    .product-page-front{
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 2rem;
+        .product-item {
+            display: grid;
+            grid-template-columns: 40% 60%;
+            padding: 0rem 1rem;
+            align-items: center;
+            border: 1px solid var(--light-color);
     
-    .banner {
-        display: flex;
-        align-items: center;
-        padding: 1rem;
-        border: var(--border);
-        gap: 3rem;
-
-        .cat-image {
-            width: 70%;
-
-            img {
-                width: 100%;
+            &:hover {
+                border: 3px solid var(--oncoblue);
             }
-        }
-        
-        .content {
-            
-
-            h3 {
-                @include titleText(2rem);
+    
+            .product-image {
+                img {
+                    max-width: 100%;
+                }
+    
             }
-
-            p {
-                @include paragraphText(1.7rem);
+    
+            .product-text {
+    
+                .product-header {
+                    @include titleText(1.9rem);
+                }
+    
+                .product-text-paragraph {
+                    @include paragraphText(1.3rem);
+                }
+    
+                a {
+                    background-color: var(--space-blue);
+                    padding: 0.5rem 0rem;
+                    font-size: 1.1rem;
+                    color: #fff;
+                    margin: 1rem 0rem;
+                    display: block;
+                    text-align: center;
+    
+                    &:hover {
+                        background-color: var(--oncobluex nz zzzczz);
+                        color: var(--space-blue);
+                        font-size: 1.4rem;
+                        font-weight: bolder;
+                    }
+                }
             }
         }
     }
+
 }
+
 
 // Services section-------------------
 
 .services-wrapper {
-    @include grid(35rem);
-
-    // >div:nth-child(1) {
-    //     background: #39c1eb;
-    // }
-    // >div:nth-child(2) {
-    //     background: #25d468;
-    // }
-    // >div:nth-child(3) {
-    //     background: #e42a96;
-    // }
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
 
     .service-box {
         display: flex;
@@ -420,7 +436,8 @@ section {
 .projects{
 
     .projects-wrapper {
-        @include grid(35rem);
+        display: grid;
+        grid-template-columns: repeat(3 , 1fr);
         gap: 2rem;
         margin-bottom: 2rem;
 
@@ -473,7 +490,9 @@ section {
         font-family: 'Smooch', cursive;
         padding: 2rem 0;
         font-size: 3rem;
-        color: var(--white)
+        color: var(--white);
+        text-transform: lowercase;
+        
         
     }
 
@@ -963,7 +982,59 @@ section {
     }
 }
 
+// Products Main Page --------------------------------------------------------------
 
+.product-page {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+    .product-item {
+        display: grid;
+        grid-template-columns: 40% 60%;
+        padding: 0rem 1rem;
+        align-items: center;
+        border: 1px solid var(--light-color);
+
+        &:hover {
+            border: 3px solid var(--oncoblue);
+        }
+
+        .product-image {
+            img {
+                max-width: 100%;
+            }
+
+        }
+
+        .product-text {
+
+            .product-header {
+                @include titleText(2.3rem);
+            }
+
+            .product-text-paragraph {
+                @include paragraphText(1.3rem);
+            }
+
+            a {
+                background-color: var(--space-blue);
+                padding: 0.5rem 0rem;
+                font-size: 1.2rem;
+                color: #fff;
+                margin: 1rem 0rem;
+                display: block;
+                text-align: center;
+
+                &:hover {
+                    background-color: var(--oncoblue);
+                    color: var(--space-blue);
+                    font-size: 1.4rem;
+                    font-weight: bolder;
+                }
+            }
+        }
+    }
+}
 
 
 
@@ -1039,6 +1110,54 @@ section {
                     }
                 }
             }
+    }
+
+    .projects{
+
+        .projects-wrapper {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 2rem;
+            margin-bottom: 2rem;
+    
+            .project-box {
+                
+                &:hover {
+                    transform: scale(1.03);
+                }
+    
+                img {
+                    max-width: 100%;
+                    max-height: auto;
+                    display: block;
+                    
+                }
+    
+                .text {
+                
+                    h3 {
+                        @include titleText(1.5rem);
+                        margin-top: 2rem;
+                    }
+    
+                    .place {
+                        @include paragraphText(1.5rem);
+                    }
+    
+                    p {
+                        @include paragraphText(1.1rem)
+                    }    
+    
+                }
+            }
+            
+        }
+    
+        .btn {
+            display: block;
+            text-align: center;
+        }
+    
     }
 
     // Services-------------------------------------------
@@ -1130,6 +1249,64 @@ section {
         }
     }
 
+    // home page products section--------------------------------
+
+    .product-page-front-wrap {
+
+        .product-page-front{
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 2rem;
+            .product-item {
+                display: grid;
+                grid-template-columns: 40% 60%;
+                padding: 0rem 1rem;
+                align-items: center;
+                border: 1px solid var(--light-color);
+        
+                &:hover {
+                    border: 3px solid var(--oncoblue);
+                }
+        
+                .product-image {
+                    img {
+                        max-width: 100%;
+                    }
+        
+                }
+        
+                .product-text {
+        
+                    .product-header {
+                        @include titleText(1.5rem);
+                    }
+        
+                    .product-text-paragraph {
+                        @include paragraphText(1.3rem);
+                    }
+        
+                    a {
+                        background-color: var(--space-blue);
+                        padding: 0.5rem 0rem;
+                        font-size: 0.9rem;
+                        color: #fff;
+                        margin: 1rem 0rem;
+                        display: block;
+                        text-align: center;
+        
+                        &:hover {
+                            background-color: var(--oncoblue);
+                            color: var(--space-blue);
+                            font-size: 1rem;
+                            font-weight: bolder;
+                        }
+                    }
+                }
+            }
+        }
+    
+    }
+
 }
 
 // #############################################################################################################
@@ -1161,6 +1338,127 @@ section {
             a {
                 @include titleText(1.2rem);
             }
+        }
+    }
+
+    // About section--------------------------
+
+    .about {
+        
+
+        .row {
+        display: flex; 
+        align-items: center;
+        flex-wrap: wrap;
+        gap: 3rem;
+
+        .video {
+            flex: 1 1 41rem;
+
+            img {
+                width: 100%;
+            }
+        }
+
+        .content {
+            flex: 1 1 41rem;
+
+            h3 {
+                @include titleText(2.7rem)
+            }
+
+            p {
+                @include paragraphText(1.5rem);
+                padding: 1rem 0;
+            }
+        }
+        }
+    }
+
+    .projects{
+
+        .projects-wrapper {
+            display: grid;
+            grid-template-columns: repeat(2 , 1fr);
+            gap: 2rem;
+            margin-bottom: 2rem;
+    
+            .project-box {
+                
+                &:hover {
+                    transform: scale(1.03);
+                }
+    
+                img {
+                    max-width: 100%;
+                    max-height: auto;
+                    display: block;
+                    
+                }
+    
+                .text {
+                
+                    h3 {
+                        @include titleText(1.5rem);
+                        margin-top: 2rem;
+                    }
+    
+                    .place {
+                        @include paragraphText(1.5rem);
+                    }
+    
+                    p {
+                        @include paragraphText(1.1rem)
+                    }    
+    
+                }
+            }
+            
+        }
+    
+        .btn {
+            display: block;
+            text-align: center;
+        }
+    
+    }
+
+    // Services section-------------------
+
+    .services-wrapper {
+        display: grid;
+        grid-template-columns: 1fr;
+        gap: 2rem;
+
+        .service-box {
+            display: flex;
+            flex-direction: column;
+            padding: 2rem;
+            text-align: center;
+            background-color: var(--powderblue);
+
+            &:hover {
+                color: var(--powderblue);
+                background-color: var(--space-blue);
+
+                h3 {
+                    color: var(--oncoblue);
+                }
+            }
+
+            .icon {
+                font-size: xxx-large;
+                color: #eee;
+            }
+
+            h3 {
+                @include titleText(1.7rem);
+            }
+
+            p {
+                @include paragraphText(1.4rem);
+            }
+            
         }
     }
 
@@ -1572,6 +1870,64 @@ section {
             text-align: justify;
         }
     }
+
+    // Home page products section---------------------------------
+
+    .product-page-front-wrap {
+
+        .product-page-front{
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 2rem;
+            .product-item {
+                display: grid;
+                grid-template-columns: 40% 60%;
+                padding: 0rem 1rem;
+                align-items: center;
+                border: 1px solid var(--light-color);
+        
+                &:hover {
+                    border: 3px solid var(--oncoblue);
+                }
+        
+                .product-image {
+                    img {
+                        max-width: 100%;
+                    }
+        
+                }
+        
+                .product-text {
+        
+                    .product-header {
+                        @include titleText(1.9rem);
+                    }
+        
+                    .product-text-paragraph {
+                        @include paragraphText(1.3rem);
+                    }
+        
+                    a {
+                        background-color: var(--space-blue);
+                        padding: 0.5rem 0rem;
+                        font-size: 1.1rem;
+                        color: #fff;
+                        margin: 1rem 0rem;
+                        display: block;
+                        text-align: center;
+        
+                        &:hover {
+                            background-color: var(--oncobluex nz zzzczz);
+                            color: var(--space-blue);
+                            font-size: 1.4rem;
+                            font-weight: bolder;
+                        }
+                    }
+                }
+            }
+        }
+    
+    }
 }
 
 // #################################################################################################
@@ -1615,6 +1971,40 @@ section {
                 }
             }
             
+        }
+    }
+
+    // About section--------------------------
+
+    .about {
+        
+
+        .row {
+        display: flex; 
+        align-items: center;
+        flex-wrap: wrap;
+        gap: 3rem;
+
+        .video {
+            flex: 1 1 41rem;
+
+            img {
+                width: 100%;
+            }
+        }
+
+        .content {
+            flex: 1 1 41rem;
+
+            h3 {
+                @include titleText(2.2rem)
+            }
+
+            p {
+                @include paragraphText(1.5rem);
+                padding: 1rem 0;
+            }
+        }
         }
     }
 
@@ -2024,6 +2414,64 @@ section {
     
 }
 
+// Front page products section-----------------------------------
+
+.product-page-front-wrap {
+
+    .product-page-front{
+        display: grid;
+        grid-template-columns: 1fr;
+        gap: 2rem;
+        .product-item {
+            display: grid;
+            grid-template-columns: 40% 60%;
+            padding: 0rem 1rem;
+            align-items: center;
+            border: 1px solid var(--light-color);
+    
+            &:hover {
+                border: 3px solid var(--oncoblue);
+            }
+    
+            .product-image {
+                img {
+                    max-width: 100%;
+                }
+    
+            }
+    
+            .product-text {
+    
+                .product-header {
+                    @include titleText(1.4rem);
+                }
+    
+                .product-text-paragraph {
+                    @include paragraphText(1.3rem);
+                }
+    
+                a {
+                    background-color: var(--space-blue);
+                    padding: 0.5rem 0rem;
+                    font-size: 1.1rem;
+                    color: #fff;
+                    margin: 1rem 0rem;
+                    display: block;
+                    text-align: center;
+    
+                    &:hover {
+                        background-color: var(--oncobluex nz zzzczz);
+                        color: var(--space-blue);
+                        font-size: 1.4rem;
+                        font-weight: bolder;
+                    }
+                }
+            }
+        }
+    }
+
+}
+
 }
 
 
@@ -2304,6 +2752,113 @@ section {
     }
 
 // ----------End of products styles  --------------
+
+// Front page products section-----------------------------------
+
+.product-page-front-wrap {
+
+    .product-page-front{
+        display: grid;
+        grid-template-columns: 1fr;
+        gap: 2rem;
+        .product-item {
+            display: grid;
+            grid-template-columns: 40% 60%;
+            padding: 0rem 1rem;
+            align-items: center;
+            border: 1px solid var(--light-color);
+    
+            &:hover {
+                border: 3px solid var(--oncoblue);
+            }
+    
+            .product-image {
+                img {
+                    max-width: 100%;
+                }
+    
+            }
+    
+            .product-text {
+    
+                .product-header {
+                    @include titleText(1.4rem);
+                }
+    
+                .product-text-paragraph {
+                    @include paragraphText(1.3rem);
+                }
+    
+                a {
+                    background-color: var(--space-blue);
+                    padding: 0.5rem 0rem;
+                    font-size: 1.1rem;
+                    color: #fff;
+                    margin: 1rem 0rem;
+                    display: block;
+                    text-align: center;
+    
+                    &:hover {
+                        background-color: var(--oncobluex nz zzzczz);
+                        color: var(--space-blue);
+                        font-size: 1.4rem;
+                        font-weight: bolder;
+                    }
+                }
+            }
+        }
+    }
+
+    }
+
+    .projects{
+
+        .projects-wrapper {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 2rem;
+            margin-bottom: 2rem;
+    
+            .project-box {
+                
+                &:hover {
+                    transform: scale(1.03);
+                }
+    
+                img {
+                    max-width: 100%;
+                    max-height: auto;
+                    display: block;
+                    
+                }
+    
+                .text {
+                
+                    h3 {
+                        @include titleText(1.5rem);
+                        margin-top: 2rem;
+                    }
+    
+                    .place {
+                        @include paragraphText(1.5rem);
+                    }
+    
+                    p {
+                        @include paragraphText(1.1rem)
+                    }    
+    
+                }
+            }
+            
+        }
+    
+        .btn {
+            display: block;
+            text-align: center;
+        }
+    
+    }
+
 }
 
 
