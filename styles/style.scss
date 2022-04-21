@@ -1009,11 +1009,11 @@ section {
         .product-text {
 
             .product-header {
-                @include titleText(2.3rem);
+                @include titleText(1.9rem);
             }
 
             .product-text-paragraph {
-                @include paragraphText(1.3rem);
+                @include paragraphText(1.1rem);
             }
 
             a {
@@ -1307,6 +1307,60 @@ section {
     
     }
 
+    // Products Main Page --------------------------------------------------------------
+
+.product-page {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+    .product-item {
+        display: grid;
+        grid-template-columns: 40% 60%;
+        padding: 0rem 1rem;
+        align-items: center;
+        border: 1px solid var(--light-color);
+
+        &:hover {
+            border: 3px solid var(--oncoblue);
+        }
+
+        .product-image {
+            img {
+                max-width: 100%;
+            }
+
+        }
+
+        .product-text {
+
+            .product-header {
+                @include titleText(1.5rem);
+            }
+
+            .product-text-paragraph {
+                @include paragraphText(0.9rem);
+            }
+
+            a {
+                background-color: var(--space-blue);
+                padding: 0.5rem 0rem;
+                font-size: 1.2rem;
+                color: #fff;
+                margin: 1rem 0rem;
+                display: block;
+                text-align: center;
+
+                &:hover {
+                    background-color: var(--oncoblue);
+                    color: var(--space-blue);
+                    font-size: 1.4rem;
+                    font-weight: bolder;
+                }
+            }
+        }
+    }
+}
+
 }
 
 // #############################################################################################################
@@ -1597,11 +1651,6 @@ section {
 
     .product {
 
-        // .product-name {
-        //     @include titleText(2rem);
-        //         padding-left: 1rem;
-        //         border-left: 1rem solid var(--oncoblue);
-        // }
 
         .product-info {
             display: grid;
@@ -1927,6 +1976,60 @@ section {
             }
         }
     
+    }
+
+    // Products Main Page --------------------------------------------------------------
+
+    .product-page {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 2rem;
+        .product-item {
+            display: grid;
+            grid-template-columns: 40% 60%;
+            padding: 0rem 1rem;
+            align-items: center;
+            border: 1px solid var(--light-color);
+
+            &:hover {
+                border: 3px solid var(--oncoblue);
+            }
+
+            .product-image {
+                img {
+                    max-width: 100%;
+                }
+
+            }
+
+            .product-text {
+
+                .product-header {
+                    @include titleText(1.7rem);
+                }
+
+                .product-text-paragraph {
+                    @include paragraphText(1.1rem);
+                }
+
+                a {
+                    background-color: var(--space-blue);
+                    padding: 0.5rem 0rem;
+                    font-size: 1.2rem;
+                    color: #fff;
+                    margin: 1rem 0rem;
+                    display: block;
+                    text-align: center;
+
+                    &:hover {
+                        background-color: var(--oncoblue);
+                        color: var(--space-blue);
+                        font-size: 1.4rem;
+                        font-weight: bolder;
+                    }
+                }
+            }
+        }
     }
 }
 
@@ -2416,9 +2519,65 @@ section {
 
 // Front page products section-----------------------------------
 
-.product-page-front-wrap {
+    .product-page-front-wrap {
 
-    .product-page-front{
+        .product-page-front{
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 2rem;
+            .product-item {
+                display: grid;
+                grid-template-columns: 40% 60%;
+                padding: 0rem 1rem;
+                align-items: center;
+                border: 1px solid var(--light-color);
+        
+                &:hover {
+                    border: 3px solid var(--oncoblue);
+                }
+        
+                .product-image {
+                    img {
+                        max-width: 100%;
+                    }
+        
+                }
+        
+                .product-text {
+        
+                    .product-header {
+                        @include titleText(1.4rem);
+                    }
+        
+                    .product-text-paragraph {
+                        @include paragraphText(1.3rem);
+                    }
+        
+                    a {
+                        background-color: var(--space-blue);
+                        padding: 0.5rem 0rem;
+                        font-size: 1.1rem;
+                        color: #fff;
+                        margin: 1rem 0rem;
+                        display: block;
+                        text-align: center;
+        
+                        &:hover {
+                            background-color: var(--oncobluex nz zzzczz);
+                            color: var(--space-blue);
+                            font-size: 1.4rem;
+                            font-weight: bolder;
+                        }
+                    }
+                }
+            }
+        }
+
+    }
+
+    // Products Main Page --------------------------------------------------------------
+
+    .product-page {
         display: grid;
         grid-template-columns: 1fr;
         gap: 2rem;
@@ -2428,39 +2587,39 @@ section {
             padding: 0rem 1rem;
             align-items: center;
             border: 1px solid var(--light-color);
-    
+
             &:hover {
                 border: 3px solid var(--oncoblue);
             }
-    
+
             .product-image {
                 img {
                     max-width: 100%;
                 }
-    
+
             }
-    
+
             .product-text {
-    
+
                 .product-header {
-                    @include titleText(1.4rem);
+                    @include titleText(1.9rem);
                 }
-    
+
                 .product-text-paragraph {
-                    @include paragraphText(1.3rem);
+                    @include paragraphText(1.1rem);
                 }
-    
+
                 a {
                     background-color: var(--space-blue);
                     padding: 0.5rem 0rem;
-                    font-size: 1.1rem;
+                    font-size: 1.2rem;
                     color: #fff;
                     margin: 1rem 0rem;
                     display: block;
                     text-align: center;
-    
+
                     &:hover {
-                        background-color: var(--oncobluex nz zzzczz);
+                        background-color: var(--oncoblue);
                         color: var(--space-blue);
                         font-size: 1.4rem;
                         font-weight: bolder;
@@ -2469,8 +2628,6 @@ section {
             }
         }
     }
-
-}
 
 }
 
@@ -2858,6 +3015,60 @@ section {
         }
     
     }
+
+    // Products Main Page --------------------------------------------------------------
+
+.product-page {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 2rem;
+    .product-item {
+        display: grid;
+        grid-template-columns: 40% 60%;
+        padding: 0rem 1rem;
+        align-items: center;
+        border: 1px solid var(--light-color);
+
+        &:hover {
+            border: 3px solid var(--oncoblue);
+        }
+
+        .product-image {
+            img {
+                max-width: 100%;
+            }
+
+        }
+
+        .product-text {
+
+            .product-header {
+                @include titleText(1.9rem);
+            }
+
+            .product-text-paragraph {
+                @include paragraphText(1.1rem);
+            }
+
+            a {
+                background-color: var(--space-blue);
+                padding: 0.5rem 0rem;
+                font-size: 1.2rem;
+                color: #fff;
+                margin: 1rem 0rem;
+                display: block;
+                text-align: center;
+
+                &:hover {
+                    background-color: var(--oncoblue);
+                    color: var(--space-blue);
+                    font-size: 1.4rem;
+                    font-weight: bolder;
+                }
+            }
+        }
+    }
+}
 
 }
 
