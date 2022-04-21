@@ -394,7 +394,7 @@ section {
 }
 
 .product-page-front-wrap .product-page-front .product-item .product-text a:hover {
-  background-color: var(--oncobluex nz zzzczz);
+  background-color: var(--oncoblue);
   color: var(--space-blue);
   font-size: 1.4rem;
   font-weight: bolder;
